@@ -1,0 +1,1 @@
+<script setup>defineProps({text:String})</script><template><span class="status" :class="{'is-red':['严重','高','待响应','整改中'].includes(text),'is-green':['合作中','已完成','已定标'].includes(text),'is-blue':['生产中','报价中','澄清中'].includes(text)}"><i></i>{{text}}</span></template>
