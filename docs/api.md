@@ -31,3 +31,7 @@ Copyright © 2026 上海如静知华信息科技有限公司。
 ## 供应商风险
 
 `POST /api/admin/supplier-risk`：返回供应商风险分、等级、采购复核标志和建议动作。
+
+## 供应连续性
+
+`POST /api/srm/insights/continuity`：按交期、库存覆盖、替代来源、集中度和恢复能力返回连续性风险、缓冲天数及改善动作。

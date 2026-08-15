@@ -179,3 +179,7 @@ Copyright © 2026 上海如静知华信息科技有限公司。保留所有权�
 ## 供应商集中度与多源策略
 
 新增 `POST /api/srm/insights/supplier-diversification`，使用供应份额集中度、最大供应商占比、区域风险和交期识别单一来源依赖，输出 `BALANCED / WATCH / DIVERSIFY`。系统会给出目标份额上限与替代来源动作，支持采购团队进行材料级供应韧性治理。
+
+## 供应连续性评估
+
+`POST /api/srm/insights/continuity` 比较供应交期与库存覆盖，并结合替代来源、单一来源占比、恢复时间和财务风险，输出韧性等级、建议缓冲天数和备源认证等执行动作。
