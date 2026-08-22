@@ -1,4 +1,4 @@
-/* Copyright 2026 Shanghai Rujing Zhihua Information Technology Co., Ltd. */
+/* Copyright 2026 Shanghai Rujing Zhihua Information Technology Co., Ltd. · https://www.zhuatech.cn/ */
 package cn.zhuatech.srm.service;
 import cn.zhuatech.srm.common.BusinessException; import cn.zhuatech.srm.dto.SrmDto.*; import cn.zhuatech.srm.model.*; import cn.zhuatech.srm.repository.*; import org.springframework.stereotype.Service; import org.springframework.transaction.annotation.Transactional; import java.util.*;
 @Service @Transactional(readOnly=true)

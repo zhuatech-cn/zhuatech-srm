@@ -1,4 +1,4 @@
-/* Copyright 2026 Shanghai Rujing Zhihua Information Technology Co., Ltd. */
+/* Copyright 2026 Shanghai Rujing Zhihua Information Technology Co., Ltd. · https://www.zhuatech.cn/ */
 package cn.zhuatech.srm.controller;
 import cn.zhuatech.srm.common.ApiResponse; import cn.zhuatech.srm.dto.SrmDto.*; import cn.zhuatech.srm.service.SrmService; import org.springframework.security.access.prepost.PreAuthorize; import org.springframework.web.bind.annotation.*; import java.util.List;
 @RestController @RequestMapping("/api/admin") @PreAuthorize("hasAnyRole('ADMIN','BUYER','AUDITOR')") public class AdminController {

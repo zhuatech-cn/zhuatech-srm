@@ -1,4 +1,4 @@
-/* Copyright 2026 Shanghai Rujing Zhihua Information Technology Co., Ltd. */
+/* Copyright 2026 Shanghai Rujing Zhihua Information Technology Co., Ltd. · https://www.zhuatech.cn/ */
 package cn.zhuatech.srm.dto;
 import jakarta.validation.constraints.*; import java.math.BigDecimal; import java.time.LocalDate; import java.time.LocalDateTime; import java.util.List;
 public final class SrmDto {

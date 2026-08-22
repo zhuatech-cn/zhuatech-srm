@@ -1,4 +1,4 @@
-/* Copyright 2026 Shanghai Rujing Zhihua Information Technology Co., Ltd. */
+/* Copyright 2026 Shanghai Rujing Zhihua Information Technology Co., Ltd. · https://www.zhuatech.cn/ */
 export const suppliers=[
  {code:'SUP-2025-0048',name:'上海华扬工业组件有限公司',category:'工业连接器',owner:'陈屿',status:'合作中',grade:'A',score:'91.5',delivery:'96.8%',risk:'低'},
  {code:'SUP-2026-0126',name:'苏州景澄精密制造有限公司',category:'精密机加工',owner:'韩思远',status:'准入审核',grade:'—',score:'84.0',delivery:'92.4%',risk:'中'},

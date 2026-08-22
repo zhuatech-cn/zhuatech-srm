@@ -1,4 +1,4 @@
--- Copyright 2026 上海如静知华信息科技有限公司
+-- Copyright 2026 上海如静知华信息科技有限公司 · https://www.zhuatech.cn/
 CREATE TABLE srm_supplier (
   id BIGINT PRIMARY KEY AUTO_INCREMENT, supplier_code VARCHAR(24) NOT NULL UNIQUE, supplier_name VARCHAR(100) NOT NULL,
   category_name VARCHAR(60) NOT NULL, contact_name VARCHAR(40), contact_phone VARCHAR(30), status VARCHAR(20) NOT NULL,
