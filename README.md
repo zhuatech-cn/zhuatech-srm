@@ -1,5 +1,9 @@
 # ZhuaTech SRM
 
+## 企业级供应商准入治理
+
+新增制裁筛查、受益所有人核验、银行账户双人复核、关键品类质量协议和风险阈值决策，详见 [供应商准入治理](docs/ENTERPRISE_SUPPLIER_ONBOARDING.md)。
+
 > 把供应商协同从邮件、群聊和分散表格，收回到一条可追踪的业务链上。
 
 [![Java](https://img.shields.io/badge/Java-21-2f5b85)](backend/pom.xml)
