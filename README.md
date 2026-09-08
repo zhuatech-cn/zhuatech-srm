@@ -1,5 +1,9 @@
 # ZhuaTech SRM
 
+## 企业级供应商绩效与整改治理
+
+新增 OTIF/质量/成本/服务加权评分、重大违约、整改责任、供应商确认、职责分离和风险审批路径，详见[绩效整改治理](docs/ENTERPRISE_SUPPLIER_PERFORMANCE_CORRECTIVE_ACTION.md)。
+
 ## 企业级供应商准入治理
 
 新增制裁筛查、受益所有人核验、银行账户双人复核、关键品类质量协议和风险阈值决策，详见 [供应商准入治理](docs/ENTERPRISE_SUPPLIER_ONBOARDING.md)。
