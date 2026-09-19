@@ -8,8 +8,14 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @Service
 public class SupplierOnboardingGovernanceService {
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public Assessment assess(Request request) {
         List<String> blockers = new ArrayList<>();
         List<String> conditions = new ArrayList<>();
@@ -26,15 +32,24 @@ public class SupplierOnboardingGovernanceService {
                 List.of("SANCTIONS", "UBO", "BANK_DUAL_CONTROL", "QUALITY_GATE"));
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Request(@NotBlank String supplierCode, @Min(0) @Max(100) int riskScore,
                           boolean criticalCategory, boolean sanctionsScreened,
                           boolean beneficialOwnerVerified, boolean bankAccountVerified,
                           boolean qualityAgreementSigned) {
+        /**
+         * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+         */
         public Request {
             if (supplierCode == null || supplierCode.isBlank()) throw new IllegalArgumentException("supplierCode is required");
             if (riskScore < 0 || riskScore > 100) throw new IllegalArgumentException("riskScore must be 0..100");
         }
     }
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Assessment(String supplierCode, String decision, int trustScore,
                              List<String> blockers, List<String> conditions, List<String> controlsChecked) {}
 }

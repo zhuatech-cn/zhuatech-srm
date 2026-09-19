@@ -1,8 +1,14 @@
 /* Copyright 2026 上海如静知华信息科技有限公司 · https://www.zhuatech.cn/ */
 package cn.zhuatech.srm.service;
 import jakarta.validation.constraints.*;import org.springframework.stereotype.Service;import java.util.*;
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @Service
 public class SupplierPerformanceCorrectiveActionService{
+ /**
+  * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+  */
  public Assessment assess(Request r){
   List<String> blockers=new ArrayList<>();List<String> actions=new ArrayList<>();
   if(!r.scorecardPeriodLocked())blockers.add("绩效评分周期尚未锁定");
@@ -22,11 +28,23 @@ public class SupplierPerformanceCorrectiveActionService{
   String route=risk==RiskLevel.CRITICAL?"采购经理→质量/风控→供应链负责人":risk==RiskLevel.HIGH?"采购经理→质量负责人":"采购经理";
   return new Assessment(r.scorecardNo(),weighted,decision,risk,route,List.copyOf(blockers),List.copyOf(actions));
  }
+ /**
+  * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+  */
  public record Request(@NotBlank String scorecardNo,@NotBlank String reviewerId,@NotBlank String approverId,
   @Min(0)@Max(100)int otifScore,@Min(0)@Max(100)int qualityScore,@Min(0)@Max(100)int costScore,@Min(0)@Max(100)int serviceScore,
   boolean scorecardPeriodLocked,boolean sourceDataComplete,boolean criticalBreach,boolean correctiveActionOwnerAssigned,
   boolean correctiveActionDueDateSet,boolean riskAndLegalReviewed,boolean supplierAcknowledged,
   boolean auditEvidenceAttached,boolean followUpReviewScheduled){}
+ /**
+  * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+  */
  public record Assessment(String scorecardNo,int weightedScore,Decision decision,RiskLevel riskLevel,String approvalRoute,List<String> blockers,List<String> actions){}
- public enum Decision{ACCEPT,CORRECTIVE_ACTION,REVIEW,BLOCKED}public enum RiskLevel{NORMAL,HIGH,CRITICAL}
+ /**
+  * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+  */
+ public enum Decision{ACCEPT,CORRECTIVE_ACTION,REVIEW,BLOCKED}/**
+                                                               * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+                                                               */
+public enum RiskLevel{NORMAL,HIGH,CRITICAL}
 }

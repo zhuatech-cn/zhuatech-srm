@@ -1,7 +1,13 @@
 /* Copyright 2026 Shanghai Rujing Zhihua Information Technology Co., Ltd. · https://www.zhuatech.cn/ */
 package cn.zhuatech.srm.config;
 import cn.zhuatech.srm.model.*; import cn.zhuatech.srm.repository.*; import org.springframework.boot.CommandLineRunner; import org.springframework.context.annotation.Bean; import org.springframework.context.annotation.Configuration; import org.springframework.security.crypto.password.PasswordEncoder; import java.math.BigDecimal; import java.time.*; import java.util.List;
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @Configuration public class DataInitializer {
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     @Bean CommandLineRunner seed(SupplierRepository suppliers,UserRepository users,SourcingEventRepository events,PurchaseOrderRepository orders,QualityIssueRepository quality,PasswordEncoder encoder){return args->{
         if(suppliers.count()>0)return;
         Supplier huayang=suppliers.save(new Supplier("SUP-2025-0048","上海华扬工业组件有限公司","工业连接器","顾洁","138****6208",Supplier.Status.ACTIVE,100,new BigDecimal("91.5"),new BigDecimal("96.80"),"LOW"));

@@ -9,9 +9,15 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 class SupplierDiversificationServiceTests {
     private final SupplierDiversificationService service = new SupplierDiversificationService();
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     @Test
     void recommendsDiversificationForSingleSourceDependency() {
         var result = service.assess(new SupplierDiversificationService.Request("MAT-001", 10000, List.of(
@@ -24,6 +30,9 @@ class SupplierDiversificationServiceTests {
         assertTrue(result.actions().getFirst().contains("45%"));
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     @Test
     void keepsBalancedMultiSourcePortfolio() {
         var result = service.assess(new SupplierDiversificationService.Request("MAT-002", 8000, List.of(

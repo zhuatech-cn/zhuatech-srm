@@ -13,8 +13,14 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @Service
 public class SupplierDiversificationService {
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public Result assess(Request request) {
         double totalShare = request.suppliers().stream().mapToDouble(SupplierExposure::share).sum();
         double concentrationIndex = request.suppliers().stream()
@@ -35,17 +41,29 @@ public class SupplierDiversificationService {
             round(largest.share()), highRiskSuppliers, decision, actions);
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     private double round(double value) {
         return Math.round(value * 10_000D) / 10_000D;
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Request(@NotBlank String materialCode, @Min(1) long annualDemand,
                           @NotEmpty List<@Valid SupplierExposure> suppliers) {}
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record SupplierExposure(@NotBlank String supplierName,
                                    @DecimalMin("0") @DecimalMax("1") double share,
                                    @Min(0) int countryRiskScore, @Min(0) int leadTimeDays) {}
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Result(String materialCode, double concentrationIndex, String largestSupplier,
                          double largestShare, int highRiskSuppliers, String decision,
                          List<String> actions) {}

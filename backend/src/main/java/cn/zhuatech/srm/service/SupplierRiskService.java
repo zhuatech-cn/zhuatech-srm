@@ -11,8 +11,14 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @Service
 public class SupplierRiskService {
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public Result assess(Request request) {
         int score = Math.min(100, (int) Math.round((100 - request.qualityScore()) * .35
             + (1 - request.onTimeRate()) * 30 + Math.min(20, request.overdueDays())
@@ -26,10 +32,16 @@ public class SupplierRiskService {
         return new Result(request.supplierName(), score, level, score >= 50, actions);
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Request(@NotBlank String supplierName, @Min(0) @Max(100) int qualityScore,
                           @DecimalMin("0") @DecimalMax("1") double onTimeRate,
                           @Min(0) int overdueDays, @Min(0) int unresolvedIssues,
                           boolean singleSource) {}
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Result(String supplierName, int riskScore, String level,
                          boolean buyerReview, List<String> actions) {}
 }

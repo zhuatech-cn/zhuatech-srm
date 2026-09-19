@@ -8,8 +8,14 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @Service
 public class SupplierContinuityService {
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public Result assess(Request request) {
         int riskScore = 0;
         if (request.inventoryCoverageDays() < request.leadTimeDays()) riskScore += 30;
@@ -32,12 +38,18 @@ public class SupplierContinuityService {
         return new Result(request.supplierCode(), riskScore, riskLevel, recommendedBufferDays, actions);
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Request(@NotBlank String supplierCode,
                           @Min(0) int leadTimeDays, @Min(0) int inventoryCoverageDays,
                           @Min(0) int alternativeSupplierCount,
                           @Min(0) @Max(100) int singleSourcePercent,
                           @Min(0) int recoveryTimeDays,
                           @Min(0) @Max(100) int financialRiskScore) {}
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Result(String supplierCode, int riskScore, String riskLevel,
                          int recommendedBufferDays, List<String> actions) {}
 }

@@ -9,8 +9,14 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @Service
 public class SupplierScorecardService {
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public Result evaluate(Request request) {
         int total = (int) Math.round(request.qualityScore() * 0.30 + request.deliveryScore() * 0.30
             + request.costScore() * 0.15 + request.serviceScore() * 0.15
@@ -27,6 +33,9 @@ public class SupplierScorecardService {
         return new Result(request.supplierCode(), total, tier, 100 - request.riskExposure(), actions);
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Request(@NotBlank String supplierCode,
                           @Min(0) @Max(100) int qualityScore,
                           @Min(0) @Max(100) int deliveryScore,
@@ -34,6 +43,9 @@ public class SupplierScorecardService {
                           @Min(0) @Max(100) int serviceScore,
                           @Min(0) @Max(100) int riskExposure) {}
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Result(String supplierCode, int totalScore, String tier,
                          int resilienceScore, List<String> improvementActions) {}
 }

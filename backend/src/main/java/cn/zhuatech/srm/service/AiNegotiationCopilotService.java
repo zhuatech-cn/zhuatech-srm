@@ -12,11 +12,20 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @Service
 public class AiNegotiationCopilotService {
     private final OpenAiCompatibleGateway gateway;
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public AiNegotiationCopilotService(OpenAiCompatibleGateway gateway) { this.gateway = gateway; }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public Result prepare(Request request) {
         int dependencyRisk = 10;
         int leverage = 50;
@@ -41,11 +50,17 @@ public class AiNegotiationCopilotService {
             enhanced.isPresent() ? "EXTERNAL_MODEL" : "LOCAL_RULES", metadata.provider(), metadata.model());
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Request(@NotBlank String supplierName, @DecimalMin("0") BigDecimal annualSpend,
                           @NotNull Boolean singleSource, @NotNull BigDecimal priceIncreaseRate,
                           @DecimalMin("0") @DecimalMax("100") BigDecimal onTimeDeliveryRate,
                           @DecimalMin("0") @DecimalMax("100") BigDecimal defectRate,
                           @Min(0) int contractDaysRemaining, @Min(0) int alternativeSupplierCount) {}
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Result(int dependencyRisk, int negotiationLeverage, String posture, List<String> strategy,
                          String negotiationBrief, String aiMode, String provider, String model) {}
 }
