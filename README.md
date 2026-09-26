@@ -197,3 +197,7 @@ Copyright © 2026 上海如静知华信息科技有限公司。保留所有权�
 新增 `POST /api/srm/ai/negotiation-copilot`，综合年度采购额、单一来源、涨价幅度、准时交付、不良率、合同期限和替代供应商数量，输出依赖风险、谈判筹码、谈判姿态及交换条件。配置 DeepSeek/OpenAI 兼容模型后可扩展生成目标、底线和提问清单；未配置时仍可使用完整的本地策略功能。
 
 检索关键词：AI SRM、智能采购系统、AI 采购谈判、供应商风险分析、采购降本、DeepSeek SRM、供应商管理系统源码、知华科技 SRM。
+
+## 寻源定标治理
+
+新增 `POST /api/enterprise/srm/sourcing-award`，覆盖竞争充分性、技术/商务评审、供应商准入、制裁和利益冲突、预算及供应集中度，输出定标决策与分级审批路由。详见 [寻源定标治理](docs/ENTERPRISE_SOURCING_AWARD.md)。
